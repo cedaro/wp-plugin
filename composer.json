@@ -1,0 +1,39 @@
+{
+  "name": "cedaro/wp-plugin",
+  "description": "A base WordPress plugin library.",
+  "license": "MIT",
+  "homepage": "https://github.com/cedaro/wp-plugin",
+  "authors": [
+    {
+      "name": "Brady Vercher",
+      "email": "brady@blazersix.com",
+      "homepage": "http://www.cedaro.com/"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/cedaro/wp-plugin/issues",
+    "source": "https://github.com/cedaro/wp-plugin"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "^1.0",
+    "container-interop/container-interop": "^1.1",
+    "pimple/pimple": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cedaro\\WP\\Plugin\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Cedaro\\WP\\Plugin\\Test\\": "tests/phpunit/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}

@@ -123,7 +123,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 * @return string
 	 */
 	public function get_slug() {
-		return $this->directory;
+		return $this->slug;
 	}
 
 	/**

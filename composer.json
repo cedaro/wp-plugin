@@ -17,8 +17,8 @@
   "require": {
     "php": ">=5.4.0",
     "composer/installers": "^1.0",
-    "container-interop/container-interop": "^1.1",
-    "pimple/pimple": "^3.0"
+    "pimple/pimple": "^3.0",
+    "psr/container": "^1.0.0"
   },
   "require-dev": {
     "phpunit/phpunit": "*@stable"

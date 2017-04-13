@@ -12,7 +12,7 @@
 
 namespace Cedaro\WP\Plugin;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * Container aware trait.

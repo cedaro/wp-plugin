@@ -7,7 +7,7 @@
     {
       "name": "Brady Vercher",
       "email": "brady@blazersix.com",
-      "homepage": "http://www.cedaro.com/"
+      "homepage": "https://www.cedaro.com/"
     }
   ],
   "support": {
@@ -16,9 +16,8 @@
   },
   "require": {
     "php": ">=5.4.0",
-    "composer/installers": "^1.0",
     "pimple/pimple": "^3.0",
-    "psr/container": "^1.0.0"
+    "psr/container": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "*@stable"
@@ -30,7 +29,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Cedaro\\WP\\Plugin\\Test\\": "tests/phpunit/"
+      "Cedaro\\WP\\Plugin\\Test\\": "tests/"
     }
   },
   "scripts": {

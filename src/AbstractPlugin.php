@@ -13,7 +13,7 @@
 namespace Cedaro\WP\Plugin;
 
 /**
- * Main plugin class.
+ * Base plugin class.
  *
  * @package Cedaro\WP\Plugin
  */

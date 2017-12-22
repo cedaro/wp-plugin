@@ -19,13 +19,6 @@ namespace Cedaro\WP\Plugin;
  */
 interface PluginInterface {
 	/**
-	 * Load the plugin.
-	 *
-	 * @return $this
-	 */
-	public function load();
-
-	/**
 	 * Retrieve the absolute path for the main plugin file.
 	 *
 	 * @return string

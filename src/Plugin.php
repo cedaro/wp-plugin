@@ -1,6 +1,6 @@
 <?php
 /**
- * Basic plugin.
+ * Generic plugin implementation.
  *
  * @package   Cedaro\WP\Plugin
  * @copyright Copyright (c) 2015 Cedaro, LLC
@@ -17,11 +17,4 @@ namespace Cedaro\WP\Plugin;
 class Plugin extends AbstractPlugin {
 
 	use ContainerAwareTrait;
-
-	/**
-	 * Load the plugin.
-	 */
-	public function load() {
-
-	}
 }

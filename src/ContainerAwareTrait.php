@@ -52,7 +52,7 @@ trait ContainerAwareTrait {
 	 * item in the container that is callable and if so, calls it.
 	 *
 	 * @param  string $method Method name.
-	 * @param  array $args    Method arguments.
+	 * @param  array  $args   Method arguments.
 	 * @return mixed
 	 */
 	public function __call( $method, $args ) {
@@ -76,7 +76,7 @@ trait ContainerAwareTrait {
 	/**
 	 * Set the container.
 	 *
-	 * @param ContainerInterface $container Dependency injection container.
+	 * @param  ContainerInterface $container Dependency injection container.
 	 * @return $this
 	 */
 	public function set_container( $container ) {

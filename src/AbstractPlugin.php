@@ -29,21 +29,29 @@ abstract class AbstractPlugin implements PluginInterface {
 
 	/**
 	 * Absolute path to the main plugin directory.
+	 *
+	 * @var string
 	 */
 	protected $directory;
 
 	/**
 	 * Absolute path to the main plugin file.
+	 *
+	 * @var string
 	 */
 	protected $file;
 
 	/**
 	 * Plugin identifier.
+	 *
+	 * @var string
 	 */
 	protected $slug;
 
 	/**
 	 * URL to the main plugin directory.
+	 *
+	 * @var string
 	 */
 	protected $url;
 
@@ -59,7 +67,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	/**
 	 * Set the plugin basename.
 	 *
-	 * @param string $basename Relative path from the main plugin directory.
+	 * @param  string $basename Relative path from the main plugin directory.
 	 * @return string
 	 */
 	public function set_basename( $basename ) {

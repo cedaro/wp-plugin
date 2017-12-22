@@ -28,7 +28,7 @@ trait HooksTrait {
 	 *
 	 * @var array
 	 */
-	protected $__filterMap = [];
+	protected $filter_map = [];
 
 	/**
 	 * Add a WordPress filter.
@@ -119,12 +119,12 @@ trait HooksTrait {
 	 * @return \Closure The callable actually attached to a WP hook
 	 */
 	protected function map_filter( $id, $method, $arg_count ) {
-		if ( empty( $this->__filterMap[ $id ] ) ) {
-			$this->__filterMap[ $id ] = function () use ( $method, $arg_count ) {
+		if ( empty( $this->filter_map[ $id ] ) ) {
+			$this->filter_map[ $id ] = function () use ( $method, $arg_count ) {
 				return call_user_func_array( [ $this, $method ], array_slice( func_get_args(), 0, $arg_count ) );
 			};
 		}
 
-		return $this->__filterMap[ $id ];
+		return $this->filter_map[ $id ];
 	}
 }

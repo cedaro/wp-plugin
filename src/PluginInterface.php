@@ -105,7 +105,7 @@ interface PluginInterface {
 	/**
 	 * Register hooks for the plugin.
 	 *
-	 * @param HookProviderInterface $provider
+	 * @param HookProviderInterface $provider Hook provider.
 	 */
 	public function register_hooks( HookProviderInterface $provider );
 }

@@ -33,6 +33,6 @@
     }
   },
   "scripts": {
-    "test": "phpunit"
+    "test": "./vendor/bin/phpunit --coverage-html coverage"
   }
 }

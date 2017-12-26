@@ -19,7 +19,8 @@ namespace Cedaro\WP\Plugin;
  */
 interface PluginInterface {
 	/**
-	 * Retrieve the absolute path for the main plugin file.
+	 * Retrieve the relative path to the main plugin file from the main plugin
+	 * directory.
 	 *
 	 * @return string
 	 */

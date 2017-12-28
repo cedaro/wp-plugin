@@ -9,7 +9,7 @@ Requires PHP 5.4+.
 To use this library in your project, add it to `composer.json`:
 
 ```sh
-composer require cedaro\wp-plugin
+composer require cedaro/wp-plugin
 ```
 
 ## Creating a Plugin
@@ -65,11 +65,11 @@ class BookPostType extends AbstractHookProvider {
 		$this->add_action( 'init', 'register_post_type' );
 		$this->add_action( 'init', 'register_meta' );
 	}
-	
+
 	protected function register_post_type() {
 		register_post_type( static::POST_TYPE, $this->get_args() );
 	}
-	
+
 	protected function register_meta() {
 		register_meta( 'post', 'isbn', array(
 			'type'              => 'string',
@@ -115,7 +115,7 @@ class Assets extends AbstractHookProvider {
 	public function register_hooks() {
 		$this->add_action( 'wp_enqueue_scripts', 'enqueue_assets' );
 	}
-	
+
 	protected function enqueue_assets() {
 		wp_enqueue_script(
 			'structure',

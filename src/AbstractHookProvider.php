@@ -9,11 +9,6 @@
 
 namespace Cedaro\WP\Plugin;
 
-use Cedaro\WP\Plugin\HookProviderInterface;
-use Cedaro\WP\Plugin\HooksTrait;
-use Cedaro\WP\Plugin\PluginAwareInterface;
-use Cedaro\WP\Plugin\PluginAwareTrait;
-
 /**
  * Base hook provider class.
  *

@@ -9,8 +9,6 @@
 
 namespace Cedaro\WP\Plugin;
 
-use Cedaro\WP\Plugin\Plugin;
-
 /**
  * Plugin factory class.
  *

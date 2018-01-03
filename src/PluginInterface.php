@@ -30,7 +30,7 @@ interface PluginInterface {
 	 * Set the plugin basename.
 	 *
 	 * @param string $basename Relative path from the main plugin directory.
-	 * @return string
+	 * @return $this
 	 */
 	public function set_basename( $basename );
 
@@ -73,7 +73,7 @@ interface PluginInterface {
 	public function set_file( $file );
 
 	/**
-	 * Retrieve the plugin indentifier.
+	 * Retrieve the plugin identifier.
 	 *
 	 * @return string
 	 */

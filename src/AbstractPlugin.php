@@ -68,7 +68,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 * Set the plugin basename.
 	 *
 	 * @param  string $basename Relative path from the main plugin directory.
-	 * @return string
+	 * @return $this
 	 */
 	public function set_basename( $basename ) {
 		$this->basename = $basename;
@@ -126,7 +126,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	}
 
 	/**
-	 * Retrieve the plugin indentifier.
+	 * Retrieve the plugin identifier.
 	 *
 	 * @return string
 	 */

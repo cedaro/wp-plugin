@@ -77,6 +77,7 @@ trait ContainerAwareTrait {
 	 * Set the container.
 	 *
 	 * @param  ContainerInterface $container Dependency injection container.
+	 * @throws InvalidArgumentException when no container is provided that implements ContainerInterface.
 	 * @return $this
 	 */
 	public function set_container( $container ) {

@@ -81,7 +81,7 @@ trait ContainerAwareTrait {
 	 */
 	public function set_container( $container ) {
 		if ( ! $container instanceof ContainerInterface ) {
-			throw new InvalidArgumentException( 'Expected a ContainerInterface' );
+			throw new \InvalidArgumentException( 'Expected a ContainerInterface.' );
 		}
 
 		$this->container = $container;

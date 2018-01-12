@@ -129,33 +129,6 @@ Another example is the `I18n` provider mentioned earlier. It receives a referenc
 
 Classes that extend `AbstractHookProvider` are automatically "plugin aware."
 
-## Dependency Injection Container
-
-When using the `PluginFactory` to create a plugin instance, the plugin will automatically have access to a dependency injection container for registering and accessing dependencies.
-
-[Pimple](https://pimple.symfony.com/) is used as the default container, but it can be replaced with any container that implements the [PSR-11 container interface](https://github.com/php-fig/container).
-
-```php
-<?php
-/**
- * Plugin Name: Structure
- */
-
-use Cedaro\WP\Plugin\PluginFactory;
-use Structure\ServiceProvider;
-
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-	require( __DIR__ . '/vendor/autoload.php' );
-}
-
-$structure = PluginFactory::create( 'structure' );
-
-// Retrieve the container and register a service provider.
-$structure
-	->get_container()
-	->register( new ServiceProvider() );
-```
-
 ## License
 
 Copyright (c) 2017 Cedaro, LLC

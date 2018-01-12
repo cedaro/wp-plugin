@@ -36,7 +36,6 @@ class PluginFactory {
 			->set_directory( plugin_dir_path( $filename ) )
 			->set_file( $filename )
 			->set_slug( $slug )
-			->set_url( plugin_dir_url( $filename ) )
-			->set_container( new Container() );
+			->set_url( plugin_dir_url( $filename ) );
 	}
 }

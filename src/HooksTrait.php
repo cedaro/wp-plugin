@@ -26,7 +26,7 @@ trait HooksTrait {
 	/**
 	 * Internal property to track closures attached to WordPress hooks.
 	 *
-	 * @var array
+	 * @var array<string, \Closure>
 	 */
 	protected $filter_map = [];
 
@@ -43,8 +43,7 @@ trait HooksTrait {
 		return add_filter(
 			$hook,
 			$this->map_filter( $this->get_wp_filter_id( $hook, $method, $priority ), $method, $arg_count ),
-			$priority,
-			$arg_count
+			$priority
 		);
 	}
 
@@ -113,9 +112,9 @@ trait HooksTrait {
 	 *
 	 * This allows hooks to use protected and private methods.
 	 *
-	 * @param  $id
-	 * @param  $method
-	 * @param  $arg_count
+	 * @param  string $id
+	 * @param  string $method
+	 * @param  int    $arg_count
 	 * @return \Closure The callable actually attached to a WP hook
 	 */
 	protected function map_filter( $id, $method, $arg_count ) {

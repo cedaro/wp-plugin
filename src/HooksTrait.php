@@ -43,7 +43,8 @@ trait HooksTrait {
 		return add_filter(
 			$hook,
 			$this->map_filter( $this->get_wp_filter_id( $hook, $method, $priority ), $method, $arg_count ),
-			$priority
+			$priority,
+			$arg_count
 		);
 	}
 
@@ -75,8 +76,7 @@ trait HooksTrait {
 		return remove_filter(
 			$hook,
 			$this->map_filter( $this->get_wp_filter_id( $hook, $method, $priority ), $method, $arg_count ),
-			$priority,
-			$arg_count
+			$priority
 		);
 	}
 

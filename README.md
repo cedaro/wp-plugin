@@ -58,6 +58,8 @@ The `BookPostType` provider might look something like this:
 <?php
 namespace Structure\PostType;
 
+use Cedaro\WP\Plugin\AbstractHookProvider;
+
 class BookPostType extends AbstractHookProvider {
 	const POST_TYPE = 'book';
 

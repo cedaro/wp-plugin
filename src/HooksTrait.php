@@ -101,7 +101,7 @@ trait HooksTrait {
 	 * @param  string $hook
 	 * @param  string $method
 	 * @param  int    $priority
-	 * @return bool|string
+	 * @return string
 	 */
 	protected function get_wp_filter_id( $hook, $method, $priority ) {
 		return _wp_filter_build_unique_id( $hook, [ $this, $method ], $priority );

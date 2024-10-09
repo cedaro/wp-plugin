@@ -2,7 +2,7 @@
 
 Adds some structure to your WordPress plugins.
 
-Requires PHP 5.4+.
+Requires PHP 8.0+.
 
 ## Installation
 

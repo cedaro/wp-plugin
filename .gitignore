@@ -2,4 +2,6 @@
 composer.lock
 coverage
 phpcs.log
+.phpunit.cache
+.phpunit.result.cache
 vendor

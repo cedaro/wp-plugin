@@ -65,34 +65,12 @@ abstract class AbstractPlugin implements PluginInterface {
 	}
 
 	/**
-	 * Set the plugin basename.
-	 *
-	 * @param  string $basename Relative path from the main plugin directory.
-	 * @return $this
-	 */
-	public function set_basename( $basename ) {
-		$this->basename = $basename;
-		return $this;
-	}
-
-	/**
 	 * Retrieve the plugin directory.
 	 *
 	 * @return string
 	 */
 	public function get_directory() {
 		return $this->directory;
-	}
-
-	/**
-	 * Set the plugin's directory.
-	 *
-	 * @param  string $directory Absolute path to the main plugin directory.
-	 * @return $this
-	 */
-	public function set_directory( $directory ) {
-		$this->directory = rtrim( $directory, '/' ) . '/';
-		return $this;
 	}
 
 	/**
@@ -115,34 +93,12 @@ abstract class AbstractPlugin implements PluginInterface {
 	}
 
 	/**
-	 * Set the path to the main plugin file.
-	 *
-	 * @param  string $file Absolute path to the main plugin file.
-	 * @return $this
-	 */
-	public function set_file( $file ) {
-		$this->file = $file;
-		return $this;
-	}
-
-	/**
 	 * Retrieve the plugin identifier.
 	 *
 	 * @return string
 	 */
 	public function get_slug() {
 		return $this->slug;
-	}
-
-	/**
-	 * Set the plugin identifier.
-	 *
-	 * @param  string $slug Plugin identifier.
-	 * @return $this
-	 */
-	public function set_slug( $slug ) {
-		$this->slug = $slug;
-		return $this;
 	}
 
 	/**
@@ -153,17 +109,6 @@ abstract class AbstractPlugin implements PluginInterface {
 	 */
 	public function get_url( $path = '' ) {
 		return $this->url . ltrim( $path, '/' );
-	}
-
-	/**
-	 * Set the URL for plugin directory root.
-	 *
-	 * @param  string $url URL to the root of the plugin directory.
-	 * @return $this
-	 */
-	public function set_url( $url ) {
-		$this->url = rtrim( $url, '/' ) . '/';
-		return $this;
 	}
 
 	/**

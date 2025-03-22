@@ -16,6 +16,13 @@ namespace Plugin;
  */
 trait ContainerAwareTrait {
 	/**
+	 * Container instance.
+	 *
+	 * @var ContainerInterface
+	 */
+	protected $container;
+
+	/**
 	 * Enable access to the DI container by plugin consumers.
 	 *
 	 * @return ContainerInterface

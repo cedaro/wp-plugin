@@ -12,8 +12,6 @@
 
 namespace Cedaro\WP\Plugin;
 
-use Psr\Container\ContainerInterface;
-
 /**
  * Container aware trait.
  *

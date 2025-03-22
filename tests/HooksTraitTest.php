@@ -34,8 +34,12 @@ class HooksTraitTest extends TestCase {
 	}
 
 	protected function get_mock_provider() {
-		return $this->getMockBuilder( HookProvider::class )
+		$mock = $this->getMockBuilder( HookProvider::class )
 			->onlyMethods( [ 'add_filter' ] )
 			->getMock();
+
+		$mock->method( 'add_filter' )->willReturn( true );
+
+		return $mock;
 	}
 }

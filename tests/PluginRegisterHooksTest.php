@@ -1,7 +1,7 @@
 <?php
 namespace Cedaro\WP\Plugin\Test;
 
-use Cedaro\WP\Plugin\Plugin;
+use Plugin\Plugin;
 
 class PluginRegisterHooksTest extends \PHPUnit\Framework\TestCase {
 	public function test_register_hooks() {
@@ -20,7 +20,7 @@ class PluginRegisterHooksTest extends \PHPUnit\Framework\TestCase {
 	}
 
 	protected function get_mock_provider() {
-		return $this->getMockBuilder( '\Cedaro\WP\Plugin\AbstractHookProvider' )
+		return $this->getMockBuilder( '\Plugin\AbstractHookProvider' )
 			->getMockForAbstractClass();
 	}
 }

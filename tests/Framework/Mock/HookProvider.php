@@ -1,7 +1,7 @@
 <?php
 namespace Cedaro\WP\Plugin\Test\Framework\Mock;
 
-use Cedaro\WP\Plugin\AbstractHookProvider;
+use Plugin\AbstractHookProvider;
 
 class HookProvider extends AbstractHookProvider {
 	public function register_hooks() {

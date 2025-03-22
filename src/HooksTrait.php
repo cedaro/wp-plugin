@@ -12,7 +12,7 @@
  * @license   MIT
  */
 
-namespace Cedaro\WP\Plugin;
+namespace Plugin;
 
 /**
  * Hooks trait.

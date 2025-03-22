@@ -7,12 +7,12 @@
  * @license   MIT
  */
 
-namespace Cedaro\WP\Plugin\Provider;
+namespace Plugin\Provider;
 
-use Cedaro\WP\Plugin\HookProviderInterface;
-use Cedaro\WP\Plugin\HooksTrait;
-use Cedaro\WP\Plugin\PluginAwareInterface;
-use Cedaro\WP\Plugin\PluginAwareTrait;
+use Plugin\HookProviderInterface;
+use Plugin\HooksTrait;
+use Plugin\PluginAwareInterface;
+use Plugin\PluginAwareTrait;
 
 /**
  * Internationalization class.

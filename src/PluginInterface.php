@@ -10,7 +10,7 @@
  * @license   MIT
  */
 
-namespace Cedaro\WP\Plugin;
+namespace Plugin;
 
 /**
  * Plugin interface.

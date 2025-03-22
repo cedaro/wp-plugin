@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Cedaro\\WP\\Plugin\\": "src/"
+      "Plugin\\": "src/"
     }
   },
   "autoload-dev": {

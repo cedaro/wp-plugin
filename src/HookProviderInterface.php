@@ -7,7 +7,7 @@
  * @license   MIT
  */
 
-namespace Cedaro\WP\Plugin;
+namespace Plugin;
 
 /**
  * Hook provider interface.

@@ -25,42 +25,42 @@ abstract class AbstractPlugin implements PluginInterface {
 	 *
 	 * @var string
 	 */
-	protected $basename;
+	protected string $basename = '';
 
 	/**
 	 * Absolute path to the main plugin directory.
 	 *
 	 * @var string
 	 */
-	protected $directory;
+	protected string $directory = '';
 
 	/**
 	 * Absolute path to the main plugin file.
 	 *
 	 * @var string
 	 */
-	protected $file;
+	protected string $file = '';
 
 	/**
 	 * Plugin identifier.
 	 *
 	 * @var string
 	 */
-	protected $slug;
+	protected string $slug = '';
 
 	/**
 	 * URL to the main plugin directory.
 	 *
 	 * @var string
 	 */
-	protected $url;
+	protected string $url = '';
 
 	/**
 	 * Retrieve the absolute path for the main plugin file.
 	 *
 	 * @return string
 	 */
-	public function get_basename() {
+	public function get_basename(): string {
 		return $this->basename;
 	}
 
@@ -69,7 +69,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 *
 	 * @return string
 	 */
-	public function get_directory() {
+	public function get_directory(): string {
 		return $this->directory;
 	}
 
@@ -79,7 +79,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 * @param  string $path Optional. Path relative to the plugin root.
 	 * @return string
 	 */
-	public function get_path( $path = '' ) {
+	public function get_path( string $path = '' ): string {
 		return $this->directory . ltrim( $path, '/' );
 	}
 
@@ -88,7 +88,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 *
 	 * @return string
 	 */
-	public function get_file() {
+	public function get_file(): string {
 		return $this->file;
 	}
 
@@ -97,7 +97,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 *
 	 * @return string
 	 */
-	public function get_slug() {
+	public function get_slug(): string {
 		return $this->slug;
 	}
 
@@ -107,7 +107,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 * @param  string $path Optional. Path relative to the plugin root.
 	 * @return string
 	 */
-	public function get_url( $path = '' ) {
+	public function get_url( string $path = '' ): string {
 		return $this->url . ltrim( $path, '/' );
 	}
 
@@ -117,7 +117,7 @@ abstract class AbstractPlugin implements PluginInterface {
 	 * @param  HookProviderInterface $provider Hook provider.
 	 * @return $this
 	 */
-	public function register_hooks( HookProviderInterface $provider ) {
+	public function register_hooks( HookProviderInterface $provider ): self {
 		if ( $provider instanceof PluginAwareInterface ) {
 			$provider->set_plugin( $this );
 		}

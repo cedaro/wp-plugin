@@ -39,7 +39,7 @@ trait HooksTrait {
 	 * @param  int      $arg_count
 	 * @return bool true
 	 */
-	protected function add_filter( $hook, $method, $priority = 10, $arg_count = 1 ) {
+	protected function add_filter( string $hook, $method, int $priority = 10, int $arg_count = 1 ): bool {
 		return add_filter(
 			$hook,
 			$this->map_filter( $this->get_wp_filter_id( $hook, $method, $priority ), $method, $arg_count ),
@@ -59,7 +59,7 @@ trait HooksTrait {
 	 * @param  int      $arg_count
 	 * @return bool true
 	 */
-	protected function add_action( $hook, $method, $priority = 10, $arg_count = 1 ) {
+	protected function add_action( string $hook, $method, int $priority = 10, int $arg_count = 1 ): bool {
 		return $this->add_filter( $hook, $method, $priority, $arg_count );
 	}
 
@@ -72,7 +72,7 @@ trait HooksTrait {
 	 * @param  int      $arg_count
 	 * @return bool Whether the function existed before it was removed.
 	 */
-	protected function remove_filter( $hook, $method, $priority = 10, $arg_count = 1 ) {
+	protected function remove_filter( string $hook, $method, int $priority = 10, int $arg_count = 1 ): bool {
 		return remove_filter(
 			$hook,
 			$this->map_filter( $this->get_wp_filter_id( $hook, $method, $priority ), $method, $arg_count ),
@@ -91,7 +91,7 @@ trait HooksTrait {
 	 * @param  int      $arg_count
 	 * @return bool Whether the function is removed.
 	 */
-	protected function remove_action( $hook, $method, $priority = 10, $arg_count = 1 ) {
+	protected function remove_action( string $hook, $method, int $priority = 10, int $arg_count = 1 ): bool {
 		return $this->remove_filter( $hook, $method, $priority, $arg_count );
 	}
 
@@ -103,7 +103,7 @@ trait HooksTrait {
 	 * @param  int    $priority
 	 * @return string
 	 */
-	protected function get_wp_filter_id( $hook, $method, $priority ) {
+	protected function get_wp_filter_id( string $hook, $method, int $priority ): string {
 		return _wp_filter_build_unique_id( $hook, [ $this, $method ], $priority );
 	}
 
@@ -117,7 +117,7 @@ trait HooksTrait {
 	 * @param  int    $arg_count
 	 * @return \Closure The callable actually attached to a WP hook
 	 */
-	protected function map_filter( $id, $method, $arg_count ) {
+	protected function map_filter( string $id, string $method, int $arg_count ) {
 		if ( empty( $this->filter_map[ $id ] ) ) {
 			$this->filter_map[ $id ] = function () use ( $method, $arg_count ) {
 				return call_user_func_array( [ $this, $method ], array_slice( func_get_args(), 0, $arg_count ) );

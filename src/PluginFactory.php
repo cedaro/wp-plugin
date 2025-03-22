@@ -22,9 +22,9 @@ class PluginFactory {
 	 * @param string $filename Optional. Absolute path to the main plugin file.
 	 *                         This should be passed if the calling file is not
 	 *                         the main plugin file.
-	 * @return Plugin Plugin instance.
+	 * @return PluginInterface Plugin instance.
 	 */
-	public static function create( string $slug = '', string $filename = '' ): Plugin {
+	public static function create( string $slug = '', string $filename = '' ): PluginInterface {
 		$slug     = self::parse_slug( $slug );
 		$filename = self::parse_filename( $filename );
 
@@ -42,9 +42,9 @@ class PluginFactory {
 	 * @param string $filename Optional. Absolute path to the main plugin file.
 	 *                         This should be passed if the calling file is not
 	 *                         the main plugin file.
-	 * @return Plugin Plugin instance.
+	 * @return PluginInterface Plugin instance.
 	 */
-	public static function create_with( Plugin $plugin, string $slug = '', string $filename = '' ): Plugin {
+	public static function create_with( Plugin $plugin, string $slug = '', string $filename = '' ): PluginInterface {
 		$slug     = self::parse_slug( $slug );
 		$filename = self::parse_filename( $filename );
 

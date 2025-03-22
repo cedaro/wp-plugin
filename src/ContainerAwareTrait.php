@@ -20,7 +20,7 @@ trait ContainerAwareTrait {
 	 *
 	 * @return ContainerInterface
 	 */
-	public function get_container() {
+	public function get_container(): ContainerInterface {
 		return $this->container;
 	}
 
@@ -31,7 +31,7 @@ trait ContainerAwareTrait {
 	 * @throws \InvalidArgumentException when no container is provided that implements ContainerInterface.
 	 * @return $this
 	 */
-	public function set_container( ContainerInterface $container ) {
+	public function set_container( ContainerInterface $container ): self {
 		$this->container = $container;
 		return $this;
 	}

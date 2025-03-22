@@ -38,7 +38,7 @@ final class PluginBuilder {
 	 *
 	 * @param Plugin $plugin Plugin instance to build.
 	 */
-	public function __construct( Plugin $plugin ) {
+	public function __construct( PluginInterface $plugin ) {
 		$this->plugin = $plugin;
 		try {
 			$this->class = new ReflectionClass( $plugin );
@@ -55,7 +55,7 @@ final class PluginBuilder {
 	 *
 	 * @return Plugin
 	 */
-	public function build(): Plugin {
+	public function build(): PluginInterface {
 		return $this->plugin;
 	}
 

@@ -24,14 +24,14 @@ interface PluginInterface {
 	 *
 	 * @return string
 	 */
-	public function get_basename();
+	public function get_basename(): string;
 
 	/**
 	 * Retrieve the plugin directory.
 	 *
 	 * @return string
 	 */
-	public function get_directory();
+	public function get_directory(): string;
 
 	/**
 	 * Retrieve the path to a file in the plugin.
@@ -39,21 +39,21 @@ interface PluginInterface {
 	 * @param  string $path Optional. Path relative to the plugin root.
 	 * @return string
 	 */
-	public function get_path( $path = '' );
+	public function get_path( string $path = '' ): string;
 
 	/**
 	 * Retrieve the absolute path for the main plugin file.
 	 *
 	 * @return string
 	 */
-	public function get_file();
+	public function get_file(): string;
 
 	/**
 	 * Retrieve the plugin identifier.
 	 *
 	 * @return string
 	 */
-	public function get_slug();
+	public function get_slug(): string;
 
 	/**
 	 * Retrieve the URL for a file in the plugin.
@@ -61,12 +61,13 @@ interface PluginInterface {
 	 * @param  string $path Optional. Path relative to the plugin root.
 	 * @return string
 	 */
-	public function get_url( $path = '' );
+	public function get_url( string $path = '' ): string;
 
 	/**
 	 * Register hooks for the plugin.
 	 *
 	 * @param HookProviderInterface $provider Hook provider.
+	 * @return $this
 	 */
-	public function register_hooks( HookProviderInterface $provider );
+	public function register_hooks( HookProviderInterface $provider ): self;
 }

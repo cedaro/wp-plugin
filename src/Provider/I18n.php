@@ -26,13 +26,13 @@ class I18n implements PluginAwareInterface, HookProviderInterface {
 	/**
 	 * Register hooks.
 	 *
-	 * Loads the text domain during the `plugins_loaded` action.
+	 * Loads the text domain during the `init` action.
 	 */
 	public function register_hooks() {
-		if ( did_action( 'plugins_loaded' ) ) {
+		if ( did_action( 'init' ) ) {
 			$this->load_textdomain();
 		} else {
-			$this->add_action( 'plugins_loaded', 'load_textdomain' );
+			$this->add_action( 'init', 'load_textdomain' );
 		}
 	}
 

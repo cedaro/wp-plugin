@@ -27,14 +27,14 @@ final class PluginBuilder {
 	/**
 	 * Plugin instance.
 	 *
-	 * @var Plugin
+	 * @var PluginInterface
 	 */
 	protected $plugin;
 
 	/**
 	 * Create a builder for a plugin.
 	 *
-	 * @param Plugin $plugin Plugin instance to build.
+	 * @param PluginInterface $plugin Plugin instance to build.
 	 */
 	public function __construct( PluginInterface $plugin ) {
 		$this->plugin = $plugin;
@@ -49,7 +49,7 @@ final class PluginBuilder {
 	/**
 	 * Finalize the plugin build.
 	 *
-	 * @return Plugin
+	 * @return PluginInterface
 	 */
 	public function build(): PluginInterface {
 		return $this->plugin;

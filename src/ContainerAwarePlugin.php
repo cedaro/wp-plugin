@@ -1,6 +1,6 @@
 <?php
 /**
- * Generic plugin implementation.
+ * Container aware plugin implementation.
  *
  * @package   Cedaro\WP\Plugin
  * @copyright Copyright (c) 2015 Cedaro, LLC
@@ -12,8 +12,11 @@ declare ( strict_types = 1 );
 namespace Plugin;
 
 /**
- * Generic plugin class.
+ * Container aware plugin class.
  *
  * @package Cedaro\WP\Plugin
  */
-class Plugin extends AbstractPlugin {}
+class ContainerAwarePlugin extends AbstractPlugin {
+
+	use ContainerAwareTrait;
+}

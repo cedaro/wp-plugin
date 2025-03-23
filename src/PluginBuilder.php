@@ -13,8 +13,6 @@ use ReflectionClass;
 
 /**
  * Plugin builder class.
- *
- * @since 1.0.0
  */
 final class PluginBuilder {
 	/**
@@ -34,8 +32,6 @@ final class PluginBuilder {
 	/**
 	 * Create a builder for a plugin.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param Plugin $plugin Plugin instance to build.
 	 */
 	public function __construct( PluginInterface $plugin ) {
@@ -50,8 +46,6 @@ final class PluginBuilder {
 
 	/**
 	 * Finalize the plugin build.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @return Plugin
 	 */
@@ -72,8 +66,6 @@ final class PluginBuilder {
 	/**
 	 * Set the plugin directory.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param string $directory Absolute path to the plugin directory.
 	 * @return $this
 	 */
@@ -83,8 +75,6 @@ final class PluginBuilder {
 
 	/**
 	 * Set the path to the main plugin file.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $file Absolute path to the main plugin file.
 	 * @return $this
@@ -96,8 +86,6 @@ final class PluginBuilder {
 	/**
 	 * Set the slug.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param string $slug Slug.
 	 * @return $this
 	 */
@@ -107,8 +95,6 @@ final class PluginBuilder {
 
 	/**
 	 * Set the URL for plugin directory root.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $url URL to the root of the plugin directory.
 	 * @return $this
@@ -122,8 +108,6 @@ final class PluginBuilder {
 	 *
 	 * Uses the reflection API to assign values to protected properties of the
 	 * plugin instance to make the returned instance immutable.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param string $name  Property name.
 	 * @param mixed  $value Property value.

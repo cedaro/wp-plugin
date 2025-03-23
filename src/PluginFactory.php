@@ -57,8 +57,6 @@ class PluginFactory {
 	/**
 	 * Set properties on the plugin instance.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param PluginBuilder $builder  Plugin builder instance.
 	 * @param string        $slug     Plugin slug.
 	 * @param string        $filename Absolute path to the main plugin file.
@@ -75,8 +73,6 @@ class PluginFactory {
 
 	/**
 	 * Determine the plugin slug.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param string $slug Optional. Plugin slug. Attempts to use the directory
 	 *                     name of the plugin if empty.
@@ -95,8 +91,6 @@ class PluginFactory {
 
 	/**
 	 * Determine the path to the main plugin file.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param string $filename Optional. Absolute path to the main plugin file.
 	 * @return string

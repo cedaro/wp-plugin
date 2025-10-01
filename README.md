@@ -6,11 +6,15 @@ Requires PHP 8.0+.
 
 ## Installation
 
+Version 2.0.0 is a major update that assumes a namespace scoping tool is being used if you're bundling this library in your project to prevent conflicts with other plugins that might be using a different version. [Strauss](https://github.com/BrianHenryIE/strauss) and [PHP Scoper](https://github.com/humbug/php-scoper) are two tools available for prefixing namespaces. If you want to continue using the library as it was, stick with requiring 1.0.0. It won't conflict with future releases since they're expected to be scoped.
+
 To use this library in your project, add it to `composer.json`:
 
 ```sh
 composer require cedaro/wp-plugin
 ```
+
+The `strauss` branch in the [Structure](https://github.com/cedaro/structure/tree/strauss) plugin provides example for namespacing prefixes.
 
 ## Creating a Plugin
 
@@ -22,7 +26,7 @@ A plugin is a simple object created to help bootstrap functionality by allowing 
  * Plugin Name: Structure
  */
 
-use Cedaro\WP\Plugin\PluginFactory;
+use Structure\Plugin\PluginFactory;
 
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require( __DIR__ . '/vendor/autoload.php' );
@@ -39,7 +43,7 @@ Related functionality can be encapsulated in a class called a "hook provider" th
 
 Hook providers allow you to encapsulate related functionality, maintain state without using globals, namespace methods without prefixing functions, limit access to internal methods, and make unit testing easier.
 
-For an example, the `Cedaro\WP\Plugin\Provider\I18n` class is a default hook provider that automatically loads the text domain so the plugin can be translated.
+For an example, the `Plugin\Provider\I18n` class is a default hook provider that automatically loads the text domain so the plugin can be translated.
 
 The only requirement for a hook provider is that it should implement the `HookProviderInterface` by defining a method called `register_hooks()`.
 
@@ -48,7 +52,7 @@ Hook providers are registered with the main plugin instance by calling `Plugin::
 ```php
 <?php
 $structure
-	->register_hooks( new \Cedaro\WP\Plugin\Provider\I18n() )
+	->register_hooks( new \Structure\Plugin\Provider\I18n() )
 	->register_hooks( new \Structure\PostType\BookPostType() );
 ```
 
@@ -58,7 +62,7 @@ The `BookPostType` provider might look something like this:
 <?php
 namespace Structure\PostType;
 
-use Cedaro\WP\Plugin\AbstractHookProvider;
+use Structure\Plugin\AbstractHookProvider;
 
 class BookPostType extends AbstractHookProvider {
 	const POST_TYPE = 'book';
@@ -111,7 +115,7 @@ For instance, in this class the `enqueue_assets()` method references the interna
 <?php
 namespace Structure\Provider;
 
-use Cedaro\WP\Plugin\AbstractHookProvider;
+use Structure\Plugin\AbstractHookProvider;
 
 class Assets extends AbstractHookProvider {
 	public function register_hooks() {

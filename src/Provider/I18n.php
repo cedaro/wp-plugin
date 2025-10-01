@@ -23,7 +23,8 @@ use Plugin\PluginAwareTrait;
  */
 class I18n implements PluginAwareInterface, HookProviderInterface {
 
-	use HooksTrait, PluginAwareTrait;
+	use HooksTrait;
+	use PluginAwareTrait;
 
 	/**
 	 * Register hooks.

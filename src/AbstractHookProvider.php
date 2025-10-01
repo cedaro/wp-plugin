@@ -18,7 +18,8 @@ namespace Plugin;
  */
 abstract class AbstractHookProvider implements HookProviderInterface, PluginAwareInterface {
 
-	use HooksTrait, PluginAwareTrait;
+	use HooksTrait;
+	use PluginAwareTrait;
 
 	/**
 	 * Registers hooks for the plugin.
